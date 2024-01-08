@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Compile the Java Source" default="compile">
+
+	<target name="compile">
+		<delete verbose="true" dir="./MovieProject/bin" />
+		<mkdir dir="./MovieProject/bin" />
+		<javac includeantruntime="false" srcdir="./MovieProject/src" destdir="./MovieProject/bin"/>
+	</target>
+</project>
