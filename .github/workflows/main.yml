@@ -21,6 +21,6 @@ jobs:
 
     - name: Build with Ant
       run: |
-        sudo apt-get install -y ant
-        ant -version
+        # sudo apt-get install -y ant
+        # ant -version
         ant compile
