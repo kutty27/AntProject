@@ -1,0 +1,27 @@
+name: Build Ant Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        cache: 'gradle'
+
+    - name: Build with Ant
+      run: |
+        sudo apt-get install -y ant
+        ant -version
+        ant compile
